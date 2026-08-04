@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Assistant | DeKUT Smart Library Hub</title>
+
+
+<!-- Google Font -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- ================= NAVBAR ================= -->
+
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-book-open"></i>
+
+<span>
+Smart Library Hub
+</span>
+
+</div>
+
+
+
+<ul class="nav-links">
+
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+
+<li>
+<a href="resources.html">
+Resources
+</a>
+</li>
+
+
+<li>
+<a href="assistant.html" class="active">
+AI Assistant
+</a>
+</li>
+
+
+<li>
+<a href="library.html">
+Library Guide
+</a>
+</li>
+
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+
+
+
+<!-- ================= HEADER ================= -->
+
+
+<section class="cta" style="margin-top:80px;">
+
+
+<h2>
+DeKUT AI Library Assistant
+</h2>
+
+
+<p>
+Get instant guidance on finding books, journals,
+e-books and library services.
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= CHATBOT ================= -->
+
+
+<section class="search-section">
+
+
+
+<div class="chat-container">
+
+
+<div class="chat-header">
+
+
+<i class="fa-solid fa-robot"></i>
+
+
+<h3>
+Library Assistant
+</h3>
+
+
+</div>
+
+
+
+
+
+<div class="chat-box" id="chatBox">
+
+
+<div class="ai-message">
+
+Hello 👋  
+I am your Smart Library Assistant.
+How can I help you today?
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="suggestions">
+
+
+<button onclick="quickQuestion('Where can I find books?')">
+Find Books
+</button>
+
+
+<button onclick="quickQuestion('How do I access e-books?')">
+E-books
+</button>
+
+
+<button onclick="quickQuestion('Where are past papers?')">
+Past Papers
+</button>
+
+
+<button onclick="quickQuestion('How do I reference APA?')">
+APA Guide
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="chat-input">
+
+
+<input 
+type="text"
+id="userMessage"
+placeholder="Ask the library assistant..."
+>
+
+
+<button onclick="sendMessage()">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= BENEFITS ================= -->
+
+
+<section class="why">
+
+
+<h2>
+How AI Assistant Helps Students
+</h2>
+
+
+
+<div class="why-container">
+
+
+<div class="why-box">
+
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+
+<h3>
+Easy Searching
+</h3>
+
+
+<p>
+Students quickly discover available library resources.
+</p>
+
+
+</div>
+
+
+
+
+<div class="why-box">
+
+
+<i class="fa-solid fa-clock"></i>
+
+
+<h3>
+Saves Time
+</h3>
+
+
+<p>
+Reduces time spent searching manually.
+</p>
+
+
+</div>
+
+
+
+
+<div class="why-box">
+
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+
+<h3>
+Academic Support
+</h3>
+
+
+<p>
+Guides students on research and referencing.
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+
+<p>
+© 2026 DeKUT Smart Library Hub
+</p>
+
+
+<p>
+AI-powered digital library solution
+</p>
+
+
+</footer>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+
+<script>
+
+
+// Quick question buttons
+
+function quickQuestion(question){
+
+document.getElementById("userMessage").value = question;
+
+sendMessage();
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
